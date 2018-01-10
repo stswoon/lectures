@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/lesson4/main.js"></script>
+</head>
+<body>
+<h1>Example 4 - cache</h1>
+<span id="result"></span>
+<script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+        setTimeout(function() {
+            var perfTiming = window.performance.timing;
+            document.getElementById("result").innerHTML =
+                perfTiming.loadEventEnd - perfTiming.navigationStart + " ms";
+        }, 0);
+    });
+</script>
+</body>
+</html>
